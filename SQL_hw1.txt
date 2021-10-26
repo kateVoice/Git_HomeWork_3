@@ -1,7 +1,7 @@
 Подключится к 
 Host: 159.69.151.133
 Port: 5056
-User: user_23_x
+User: user_23_4
 Pass: 123
 Table: qa_students_1
 
