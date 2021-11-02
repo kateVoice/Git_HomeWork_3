@@ -1,5 +1,4 @@
 --1. Вывести всех работников чьи зарплаты есть в базе, вместе с зарплатами.
-
 select e.id, e.employee_name, s.monthly_salary from employee_salary es 
 join employees e on es.employee_id = e.id 
 join salary s on es.salary_id = s.id
@@ -221,8 +220,7 @@ full join salary s on es.salary_id = s.id
 where e.employee_name notnull 
 order by s.monthly_salary;
 
- --30. Вывести имена, должности и ЗП всех специалистов по возрастанию 
- --у специалистов у которых ЗП от 1700 до 2300
+ --30. Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП от 1700 до 2300
 select e.employee_name, r.role_name, s.monthly_salary 
 from employees e 
 join roles_employee re on e.id = re.employee_id 
@@ -232,8 +230,7 @@ join salary s on es.salary_id = s.id
 where s.monthly_salary >= 1700 and s.monthly_salary <=2300
 order by s.monthly_salary;
 
---31. Вывести имена, должности и ЗП всех специалистов по возрастанию 
---у специалистов у которых ЗП меньше 2300
+--31. Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП меньше 2300
 select e.employee_name, r.role_name, s.monthly_salary 
 from employees e 
 join roles_employee re on e.id = re.employee_id 
@@ -243,8 +240,7 @@ join salary s on es.salary_id = s.id
 where s.monthly_salary < 2300
 order by s.monthly_salary;
 
- -- 32. Вывести имена, должности и ЗП всех специалистов 
- --по возрастанию у специалистов у которых ЗП равна 1100, 1500, 2000
+ -- 32. Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП равна 1100, 1500, 2000
 select e.employee_name, r.role_name, s.monthly_salary 
 from employees e 
 join roles_employee re on e.id = re.employee_id 
@@ -253,4 +249,3 @@ join employee_salary es on e.id =es.employee_id
 join salary s on es.salary_id = s.id
 where s.monthly_salary in (1100, 1500, 2000)
 order by s.monthly_salary;
-
